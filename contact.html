@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Mana Health Sciences — investor, partnership, and general enquiries.">
+  <meta name="theme-color" content="#1F3B34">
+  <title>Contact — Mana Health Sciences</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <style>
+    /* Tab component — contact page */
+    .tab-nav {
+      display: flex;
+      gap: 2px;
+      margin-bottom: var(--space-10);
+      background-color: rgba(31,59,52,0.06);
+      padding: 4px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: var(--space-4) var(--space-5);
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: var(--tracking-wider);
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: all var(--transition-fast);
+      text-align: center;
+    }
+
+    .tab-btn--active {
+      background-color: var(--deep-pine);
+      color: var(--bone);
+    }
+
+    .tab-btn:hover:not(.tab-btn--active) {
+      background-color: rgba(31,59,52,0.08);
+      color: var(--deep-pine);
+    }
+
+    [data-tab-panel] { display: block; }
+    [data-tab-panel][hidden] { display: none; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Mana Health Sciences — Home">
+        <img src="assets/images/logo.png" alt="Mana Health Sciences" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="nav__logo-text" style="display:none;">Mana</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="platform.html" class="nav__link">Platform</a></li>
+        <li><a href="network.html" class="nav__link">Network</a></li>
+        <li><a href="science.html" class="nav__link">Science</a></li>
+        <li><a href="partners.html" class="nav__link">Partners</a></li>
+        <li><a href="investors.html" class="nav__link">Investors</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Partner With Us</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="platform.html" class="nav__mobile-link">Platform</a>
+    <a href="network.html" class="nav__mobile-link">Network</a>
+    <a href="science.html" class="nav__mobile-link">Science</a>
+    <a href="partners.html" class="nav__mobile-link">Partners</a>
+    <a href="investors.html" class="nav__mobile-link">Investors</a>
+    <a href="contact.html" class="btn btn--primary nav__mobile-cta">Partner With Us</a>
+  </div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="contact-hero-title">
+      <div class="page-hero__glow" aria-hidden="true"></div>
+      <div class="container">
+        <p class="page-hero__eyebrow">Contact</p>
+        <h1 class="page-hero__title" id="contact-hero-title">
+          Let's start<br>
+          <em>the right conversation.</em>
+        </h1>
+        <p class="page-hero__subtitle">
+          We receive enquiries from investors, clinical partners, hospital systems, and researchers. Select the track that matches your interest and we will ensure your message reaches the right person.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT GRID
+    ===================================================================== -->
+    <section class="section section--lg" aria-label="Contact forms">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left: Quick-track cards -->
+          <div class="reveal">
+            <p class="section-label">Enquiry types</p>
+            <h2 class="contact-info__title">
+              Three tracks.<br>Direct to the right desk.
+            </h2>
+            <p class="contact-info__body">
+              Mana Health Sciences is a corporate entity. If you are a patient looking for neurotherapy, please visit <a href="https://anavaclinics.com" style="color: var(--brass);">anavaclinics.com</a> — the patient-facing site for our clinical network.
+            </p>
+
+            <div class="contact-track">
+
+              <div class="contact-track-item" role="button" tabindex="0" aria-label="Investor enquiries" onclick="document.querySelector('[data-tab-btn=investor]').click()">
+                <div class="contact-track-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div>
+                  <span class="contact-track-item__label">Investors</span>
+                  <h3 class="contact-track-item__title">Investor Enquiries</h3>
+                  <p class="contact-track-item__body">Investment thesis, deck requests, due diligence conversations.</p>
+                </div>
+              </div>
+
+              <div class="contact-track-item" role="button" tabindex="0" aria-label="Partnership enquiries" onclick="document.querySelector('[data-tab-btn=partner]').click()">
+                <div class="contact-track-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <span class="contact-track-item__label">Partners</span>
+                  <h3 class="contact-track-item__title">Partnership Enquiries</h3>
+                  <p class="contact-track-item__body">Franchise, co-branding, hospital system and clinician partnerships.</p>
+                </div>
+              </div>
+
+              <div class="contact-track-item" role="button" tabindex="0" aria-label="General enquiries" onclick="document.querySelector('[data-tab-btn=general]').click()">
+                <div class="contact-track-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact-track-item__label">General</span>
+                  <h3 class="contact-track-item__title">General Enquiries</h3>
+                  <p class="contact-track-item__body">Research collaborations, media, regulatory, and other matters.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Direct contact -->
+            <div style="margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid var(--color-border);">
+              <p style="font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--brass); margin-bottom: var(--space-4);">Direct Contact</p>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-3);">
+                <a href="mailto:contact@manahealthsciences.com" style="color: var(--deep-pine); font-weight: 500;">contact@manahealthsciences.com</a>
+              </p>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted);">
+                <a href="mailto:investors@manahealthsciences.com" style="color: var(--deep-pine); font-weight: 500;">investors@manahealthsciences.com</a>
+                <span style="color: var(--color-text-muted);"> — investor enquiries</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Tabbed forms -->
+          <div class="reveal reveal-delay-1">
+
+            <div class="tab-nav" role="tablist" aria-label="Enquiry type">
+              <button class="tab-btn" role="tab" data-tab-btn="investor" aria-selected="false">Investor</button>
+              <button class="tab-btn" role="tab" data-tab-btn="partner" aria-selected="false">Partner</button>
+              <button class="tab-btn" role="tab" data-tab-btn="general" aria-selected="false">General</button>
+            </div>
+
+            <!-- Investor Form -->
+            <div data-tab-panel="investor" hidden>
+              <form class="form-stack contact-form" aria-label="Investor enquiry form" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="ci-fname">First Name *</label>
+                    <input class="form-input" type="text" id="ci-fname" name="fname" required autocomplete="given-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ci-lname">Last Name *</label>
+                    <input class="form-input" type="text" id="ci-lname" name="lname" required autocomplete="family-name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ci-email">Email Address *</label>
+                  <input class="form-input" type="email" id="ci-email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ci-firm">Firm / Organisation</label>
+                  <input class="form-input" type="text" id="ci-firm" name="firm">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ci-role">Your Role</label>
+                  <input class="form-input" type="text" id="ci-role" name="role" placeholder="Partner, Principal, Analyst, Family Office, etc.">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ci-message">Your Enquiry *</label>
+                  <textarea class="form-input form-textarea" id="ci-message" name="message" required rows="4" placeholder="Describe your investment context and what you'd like to discuss."></textarea>
+                </div>
+                <button type="submit" class="btn btn--pine" style="width: 100%; justify-content: center;">
+                  Send Investor Enquiry
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <p class="form-note">We respond to qualified investor enquiries within 2–3 business days. All conversations are treated as confidential.</p>
+              </form>
+            </div>
+
+            <!-- Partner Form -->
+            <div data-tab-panel="partner" hidden>
+              <form class="form-stack contact-form" aria-label="Partnership enquiry form" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="cp-fname">First Name *</label>
+                    <input class="form-input" type="text" id="cp-fname" name="fname" required autocomplete="given-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="cp-lname">Last Name *</label>
+                    <input class="form-input" type="text" id="cp-lname" name="lname" required autocomplete="family-name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-email">Email Address *</label>
+                  <input class="form-input" type="email" id="cp-email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-org">Organisation / Practice Name *</label>
+                  <input class="form-input" type="text" id="cp-org" name="org" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-type">Partner Type</label>
+                  <select class="form-input form-select" id="cp-type" name="partner_type">
+                    <option value="">Select…</option>
+                    <option value="independent-clinician">Independent Clinician (Neurologist / Psychiatrist)</option>
+                    <option value="hospital-system">Hospital / Multi-specialty System</option>
+                    <option value="research">Research or Academic Institution</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-location">Location (City / Country) *</label>
+                  <input class="form-input" type="text" id="cp-location" name="location" required placeholder="e.g. Mumbai, India">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-message">Tell us about your context *</label>
+                  <textarea class="form-input form-textarea" id="cp-message" name="message" required rows="4" placeholder="What kind of partnership are you exploring? What neuromodulation services are you looking to offer?"></textarea>
+                </div>
+                <button type="submit" class="btn btn--pine" style="width: 100%; justify-content: center;">
+                  Send Partnership Enquiry
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <p class="form-note">No commitment required at this stage. We'll respond within 3–5 business days to arrange an initial conversation.</p>
+              </form>
+            </div>
+
+            <!-- General Form -->
+            <div data-tab-panel="general" hidden>
+              <form class="form-stack contact-form" aria-label="General enquiry form" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="cg-fname">First Name *</label>
+                    <input class="form-input" type="text" id="cg-fname" name="fname" required autocomplete="given-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="cg-lname">Last Name *</label>
+                    <input class="form-input" type="text" id="cg-lname" name="lname" required autocomplete="family-name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cg-email">Email Address *</label>
+                  <input class="form-input" type="email" id="cg-email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cg-subject">Subject</label>
+                  <input class="form-input" type="text" id="cg-subject" name="subject" placeholder="What is your enquiry about?">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cg-message">Message *</label>
+                  <textarea class="form-input form-textarea" id="cg-message" name="message" required rows="5" placeholder="Your message…"></textarea>
+                </div>
+                <button type="submit" class="btn btn--pine" style="width: 100%; justify-content: center;">
+                  Send Message
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <p class="form-note">If you are a patient seeking neurotherapy, please visit <a href="https://anavaclinics.com" style="color: var(--brass);">anavaclinics.com</a> instead.</p>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="assets/images/logo.png" alt="Mana Health Sciences" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <span class="footer__logo-text" style="display:none;">Mana</span>
+          </div>
+          <p class="footer__tagline">"The mind can heal. We help it start."</p>
+          <span class="footer__sanskrit" title="Mana — mind, consciousness (Sanskrit)">मन</span>
+        </div>
+        <nav aria-label="Company navigation">
+          <span class="footer__col-title">Company</span>
+          <ul class="footer__links" role="list">
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="platform.html" class="footer__link">Platform</a></li>
+            <li><a href="science.html" class="footer__link">Science</a></li>
+            <li><a href="about.html#leadership" class="footer__link">Leadership</a></li>
+          </ul>
+          <a href="network.html" class="footer__anava-card" style="display:block; margin-top: var(--space-6);">
+            <span class="footer__anava-label">Our clinical network</span>
+            <span class="footer__anava-name">Anava Clinics</span>
+            <span class="footer__anava-desc">anavaclinics.com →</span>
+          </a>
+        </nav>
+        <nav aria-label="Partners navigation">
+          <span class="footer__col-title">Partners</span>
+          <ul class="footer__links" role="list">
+            <li><a href="partners.html" class="footer__link">Franchise &amp; Partners</a></li>
+            <li><a href="partners.html#hospitals" class="footer__link">Hospital Systems</a></li>
+            <li><a href="network.html" class="footer__link">Clinical Network</a></li>
+          </ul>
+        </nav>
+        <div>
+          <span class="footer__col-title">Investors &amp; Contact</span>
+          <ul class="footer__links" role="list">
+            <li><a href="investors.html" class="footer__link">Investment Case</a></li>
+            <li><a href="investors.html#deck" class="footer__link">Request Investor Deck</a></li>
+            <li><a href="contact.html" class="footer__link">General Enquiries</a></li>
+            <li><a href="mailto:contact@manahealthsciences.com" class="footer__link">contact@manahealthsciences.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Mana Health Sciences. All rights reserved.</p>
+        <p class="footer__motto">The mind can heal. We help it start.</p>
+        <div class="footer__legal">
+          <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer__legal-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
