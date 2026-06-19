@@ -156,7 +156,8 @@
       var elapsed = timestamp - startTime;
       var progress = Math.min(elapsed / duration, 1);
       var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(target * eased) + suffix;
+      var val = Math.round(target * eased);
+      el.textContent = (val >= 1000 ? val.toLocaleString() : val) + suffix;
       if (progress < 1) requestAnimationFrame(step);
     }
 
