@@ -1239,6 +1239,12 @@
   background-color: rgba(185,138,62,0.08);
 }
 
+.modality-card__tag--soon {
+  color: var(--clay);
+  border-color: rgba(197,107,79,0.35);
+  background-color: rgba(197,107,79,0.08);
+}
+
 .modality-card__body { padding: var(--space-8); }
 
 .modality-card__name {
